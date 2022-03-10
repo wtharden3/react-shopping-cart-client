@@ -49,3 +49,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ⋅⋅* [React](https://reactjs.org/), 
 ⋅⋅* [TypeScript](https://www.typescriptlang.org/), 
 ⋅⋅* [Material UI](https://mui.com/)
+
+## Dependencies
+⋅⋅* @material-ui/core
+⋅⋅* @material-ui/icons
