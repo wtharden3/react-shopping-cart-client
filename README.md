@@ -55,3 +55,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ⋅⋅* @material-ui/core
 ⋅⋅* @material-ui/icons
 ⋅⋅* [react-query](https://react-query.tanstack.com/)
+
+## Notes
+[React.StrictMode removed due to Material UI drawer error](https://github.com/mui/material-ui/issues/20561)
