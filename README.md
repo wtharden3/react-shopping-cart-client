@@ -50,6 +50,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ⋅⋅* [TypeScript](https://www.typescriptlang.org/), 
 ⋅⋅* [Material UI](https://mui.com/)
 ⋅⋅* [Styled Components](https://styled-components.com/)
+⋅⋅* [Fake Store API](https://fakestoreapi.com/)
 
 ## Dependencies
 ⋅⋅* @material-ui/core
