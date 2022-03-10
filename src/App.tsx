@@ -27,7 +27,7 @@ const App = () => {
 
   const {data, isLoading, error} = useQuery<CartItemType[], Error>('products', getProducts);
   
-  const getTotalItems = () => null;
+  const getTotalItems = (items: CartItemType[]) => null;
 
   const handleAddToCart = (clickedItem: CartItemType) => null; //null means return value is empty
 
@@ -41,7 +41,9 @@ const App = () => {
         Cart goes here
       </Drawer>
       <StyledButton onClick={() => setCartOpen(true)}>
-      open
+        <Badge badgeContent={getTotalItems(cartItems)} color="error">
+          <AddShoppingCartIcon />
+        </Badge>
       </StyledButton>
       <Grid container spacing={3}>
         {data?.map(item => (
