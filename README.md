@@ -46,16 +46,16 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Technologies used
-- [React](https://reactjs.org/), 
-- [TypeScript](https://www.typescriptlang.org/), 
-- [Material UI](https://mui.com/)
-- [Styled Components](https://styled-components.com/)
-- [Fake Store API](https://fakestoreapi.com/)
+* [React](https://reactjs.org/), 
+* [TypeScript](https://www.typescriptlang.org/), 
+* [Material UI](https://mui.com/)
+* [Styled Components](https://styled-components.com/)
+* [Fake Store API](https://fakestoreapi.com/)
 
 ## Dependencies
-- @material-ui/core
-- @material-ui/icons
-- [react-query](https://react-query.tanstack.com/)
+* @material-ui/core
+* @material-ui/icons
+* [react-query](https://react-query.tanstack.com/)
 
 ## Notes
 [React.StrictMode removed due to Material UI drawer error](https://github.com/mui/material-ui/issues/20561)
