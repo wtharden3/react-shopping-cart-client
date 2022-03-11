@@ -27,7 +27,11 @@ const App = () => {
 
   const {data, isLoading, error} = useQuery<CartItemType[], Error>('products', getProducts);
   
-  const getTotalItems = (items: CartItemType[]) => null;
+  const getTotalItems = (items: CartItemType[]) => {
+    return items.reduce((accumlator: number, item) => {
+      return accumlator + item.amount;
+    }, 0)
+  };
 
   const handleAddToCart = (clickedItem: CartItemType) => null; //null means return value is empty
 
