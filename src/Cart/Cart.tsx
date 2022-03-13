@@ -1,12 +1,28 @@
+import CartItem from '../CartItem/CartItem';
 //Styles
 import { Wrapper } from './Cart.styles';
 //Types
 import { CartItemType } from '../App';
 
-const Cart:React.FC = () => {
+type Props = {
+  cartItems: CartItemType[];
+  addToCart: (clickedItem: CartItemType) => void; //void means it returns nothing
+  removeFromCart: (id: number) => void;
+}
+
+const Cart:React.FC<Props> = ({cartItems, addToCart, removeFromCart}) => {
   return(
     <Wrapper>
-      Cart Contents
+      <h2>Your Shopping Cart</h2>
+      {cartItems.length === 0 ? <p>No Items in Cart</p> : null}
+      {cartItems.map(item => (
+        <CartItem 
+          key={item.id}
+          item={item}
+          addToCart={addToCart}
+          removeFromCart={removeFromCart}
+        />
+      ))}
     </Wrapper>
   )
 }
