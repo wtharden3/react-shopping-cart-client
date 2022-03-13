@@ -51,7 +51,18 @@ const App = () => {
     })
   }; //null means return value is empty
 
-  const handleRemoveFromCart = () => null;
+  const handleRemoveFromCart = (id: number) => {
+    setCartItems(previous => 
+      previous.reduce((accumulator, item) => {
+        if (item.id === id) {
+          if(item.amount === 1) return accumulator; 
+          return [...accumulator, {...item, amount: item.amount - 1}]
+        } else {
+          return [...accumulator, item]
+        }
+      }, [] as CartItemType[])
+    )
+  };
 
   if(isLoading) return <LinearProgress />;
   if(error) return <div>Something went wrong...</div>;
