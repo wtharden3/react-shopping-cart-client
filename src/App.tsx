@@ -34,7 +34,22 @@ const App = () => {
     }, 0)
   };
 
-  const handleAddToCart = (clickedItem: CartItemType) => null; //null means return value is empty
+  const handleAddToCart = (clickedItem: CartItemType) => {
+    setCartItems(previous => {
+      //1. is the item already added into the cart
+      const isItemInCart = previous.find(item => item.id === clickedItem.id)
+      if (isItemInCart){
+      // update item in specfic item
+        return previous.map(item => 
+          item.id === clickedItem.id 
+          ? {...item, amount: item.amount + 1} 
+          : item
+        );
+      }
+      // 2. First time the item is added
+      return [...previous, { ...clickedItem, amount: 1}]
+    })
+  }; //null means return value is empty
 
   const handleRemoveFromCart = () => null;
 
